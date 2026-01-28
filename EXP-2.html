@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SiyaCare Pharmacy</title>
+
+
+    <!-- External CSS Linking -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>SiyahCare Pharmacy</h1>
+
+    <!-- Pharmacy Banner -->
+    <img src="pharmacy_banner.jpg" alt="Pharmacy Banner" class="banner">
+
+    <div class="container">
+
+        <!-- Pharmacy Media Section -->
+        <div class="media-section">
+            <h2>Pharmacy Awareness</h2>
+
+            <video controls>
+                <source src="pharmacy_video.mp4" type="video/mp4">
+            </video>
+
+            <audio controls>
+                <source src="pharmacy_audio.mpeg" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <!-- Pharmacy Form Section -->
+        <div class="form-section">
+            <h2>Medicine Order Form</h2>
+
+            <form>
+                <label>Full Name:</label>
+                <input type="text" required>
+
+                <label>Email ID:</label>
+                <input type="email" required>
+
+                <label>Contact Number:</label>
+                <input type="text" required>
+
+                <label>Medicine Category:</label>
+                <select>
+                    <option>Tablets</option>
+                    <option>Syrups</option>
+                    <option>Injections</option>
+                    <option>OTC Medicines</option>
+                </select>
+
+                <label>Upload Prescription:</label>
+                <input type="file">
+
+                <label>Delivery Address:</label>
+                <textarea rows="4"></textarea>
+
+                <button type="submit">Place Order</button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
