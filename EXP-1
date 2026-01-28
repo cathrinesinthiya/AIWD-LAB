@@ -1,0 +1,111 @@
+INDEX.HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SiyahCare Pharmacy</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f8fb;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            color: #2c7be5;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 60%;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        input[type="radio"] {
+            width: auto;
+        }
+
+        input[type="submit"] {
+            background-color: #2c7be5;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SHOP NAME -->
+    <h1>SiyahCare Pharmacy</h1>
+    <h2>Your Trusted Online Medical Store</h2>
+
+    <!-- BANNER IMAGE -->
+    <img src="pharmacy_banner.jpg" alt="Online Pharmacy Banner" width="100%">
+
+    <!-- PROMOTIONAL VIDEO -->
+    <h2>About Our Pharmacy</h2>
+    <video width="400" controls>
+        <source src="pharmacy_video.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
+
+    <!-- INTRO AUDIO -->
+    <h2>Pharmacy Introduction Audio</h2>
+    <audio controls>
+        <source src="pharmacy_audio.mpeg" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
+
+    <!-- MEDICINE ORDER FORM -->
+    <h2>Medicine Order & Registration Form</h2>
+
+    <form>
+        <label>Full Name:</label>
+        <input type="text" name="name" required>
+
+        <label>Email Address:</label>
+        <input type="email" name="email" required>
+
+        <label>Date of Birth:</label>
+        <input type="date" name="dob">
+
+        <label>Gender:</label><br>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+        <input type="radio" name="gender"> Other
+        <br><br>
+
+        <label>Medicine Category:</label>
+        <select>
+            <option>General Medicines</option>
+            <option>Diabetes Care</option>
+            <option>Heart Care</option>
+            <option>Skin Care</option>
+        </select>
+
+        <label>Delivery Address:</label>
+        <textarea rows="4"></textarea>
+
+        <label>Upload Prescription:</label>
+        <input type="file">
+
+        <input type="submit" value="Place Order">
+    </form>
+
+</body>
+</html>
