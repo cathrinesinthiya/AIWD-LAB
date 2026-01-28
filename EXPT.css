@@ -1,0 +1,92 @@
+body {
+    background-color: lightpink !important;
+    font-family: Arial, sans-serif;
+    background-color: #f4f8fb;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #e52c76;
+}
+
+.banner {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+/* Flexbox Layout */
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+/* Media Section */
+.media-section {
+    flex: 1;
+    background: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.media-section video,
+.media-section audio {
+    width: 50%;
+    margin-top: 10px;
+}
+
+/* Form Section */
+.form-section {
+    flex: 1;
+    background: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 50%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+/* Button Styling with Transition */
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #e52c70;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #bf1a5c;
+}
+
+/* Input Focus Transition */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border: 2px solid #e52c79;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
