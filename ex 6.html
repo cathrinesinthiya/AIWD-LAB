@@ -1,0 +1,117 @@
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Management</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        .event {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 10px;
+        }
+
+        .details {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .highlight {
+            background-color: #ffeaa7;
+        }
+
+        h3.active {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Upcoming Events</h2>
+
+<div class="event">
+    <h3>Tech Fest</h3>
+    <p>Date: April 10</p>
+
+    <button class="toggleBtn">Show Details</button>
+
+    <div class="details">
+        <p>Includes coding competitions and workshops.</p>
+        <button class="registerBtn">Register</button>
+    </div>
+</div>
+
+<div class="event">
+    <h3>Cultural Night</h3>
+    <p>Date: April 15</p>
+
+    <button class="toggleBtn">Show Details</button>
+
+    <div class="details">
+        <p>Dance, music, and drama performances.</p>
+        <button class="registerBtn">Register</button>
+    </div>
+</div>
+
+<div class="event">
+    <h3>Sports Meet</h3>
+    <p>Date: April 20</p>
+
+    <button class="toggleBtn">Show Details</button>
+
+    <div class="details">
+        <p>Outdoor and indoor games competition.</p>
+        <button class="registerBtn">Register</button>
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+
+    // Show/Hide Details
+    $(".toggleBtn").click(function(){
+
+        let eventDiv = $(this).closest(".event");
+
+        // slideToggle effect
+        eventDiv.find(".details").slideToggle();
+
+        // Change button text
+        if($(this).text() === "Show Details"){
+            $(this).text("Hide Details");
+        } else {
+            $(this).text("Show Details");
+        }
+
+        // Change background color of selected event
+        $(".event").removeClass("highlight");
+        eventDiv.addClass("highlight");
+
+        // Highlight h3 using traversing
+        $("h3").removeClass("active");
+        eventDiv.find("h3").addClass("active");
+
+        // Get Event Title
+        let eventTitle = eventDiv.find("h3").text();
+
+        alert("Selected Event: " + eventTitle);
+    });
+
+    // Register Button Click
+    $(".registerBtn").click(function(){
+
+        let eventTitle = $(this).closest(".event").find("h3").text();
+
+        // Redirect with data (query string)
+        window.location.href = "register.html?event=" + encodeURIComponent(eventTitle);
+    });
+
+});
+</script>
+
+</body>
+</html>
